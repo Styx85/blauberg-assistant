@@ -1,7 +1,7 @@
 from collections.abc import Mapping
 from .blauberg_device import BlaubergDevice
 from .smart_wifi import smart_wifi
-from .ecoventv2 import eco_vent
+from .smart_home import smart_home
 
 devices: Mapping[int, BlaubergDevice] = {
   0x300: smart_home,
