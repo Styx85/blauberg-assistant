@@ -100,7 +100,7 @@ version_packet = Packet(
     ]
 )
 
-eco_vent = BlaubergDevice(
+smart_home = BlaubergDevice(
     name=["Blauberg VENTO Expert A50-1 W V.2", "Blauberg VENTO Expert A85-1 W V.2", "Blauberg VENTO Expert A100-1 W V.2", "Blauberg VENTO Expert Duo A30-1 W V.2", "Blauberg VENTO Expert A30 W V.2"],
     parameter_map={
         Purpose.POWER: SinglePointAction(0x01),
