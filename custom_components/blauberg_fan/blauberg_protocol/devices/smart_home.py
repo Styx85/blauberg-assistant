@@ -105,16 +105,14 @@ eco_vent = BlaubergDevice(
     parameter_map={
         Purpose.POWER: SinglePointAction(0x01),
         Purpose.FAN_SPEED: ComplexAction(
-            parameters=[0x18],
-            response_parser=lambda response: response[0x18],
-            # Since this fan model doesn't have support for direct fan control
-            # we can set the maximum fan speeds instead
+            parameters=[0x04,0x05],
+            response_parser=lambda response: response[0x04],
             request_parser=lambda input: {
-                0x18: variable_to_bytes(input),
-                0x1B: variable_to_bytes(input),
-                0x03: 0x01,
-                0x1E: 0x00,
-                0x04: variable_to_bytes(input),
+                0x04: 1,
+                0x05: 2,
+
+        # TODO add other existing purposes as well
+
             },
         ),
         Purpose.MOISTURE_SENSOR: SinglePointAction(0x2E),
