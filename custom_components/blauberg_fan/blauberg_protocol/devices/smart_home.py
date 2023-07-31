@@ -28,8 +28,8 @@ smart_home = BlaubergDevice(
                 0x04: 1,
                 0x05: 2,
 
-        # TODO add other existing purposes as well
-
-            },
+            }
         ),
-   
+        # TODO: Add other existing purposes as well
+    }
+)
