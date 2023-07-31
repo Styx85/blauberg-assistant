@@ -7,4 +7,5 @@ devices: Mapping[int, BlaubergDevice] = {
   0x300: smart_home,
   0x400: smart_home,
   0x500: smart_home,
-  0x600: smart_wifi}
+  0x600: smart_wifi
+}
